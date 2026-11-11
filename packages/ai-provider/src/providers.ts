@@ -666,7 +666,7 @@ const RETIRED_MODELS: Partial<Record<AiProviderId, Record<string, string>>> = {
 export const DEFAULT_MAX_OUTPUT_TOKENS = 32768
 /** bounds accepted for AiSettings.maxOutputTokens: below the first a short answer cannot even finish, above the second one turn risks the whole context window */
 export const MIN_MAX_OUTPUT_TOKENS = 1024
-export const MAX_MAX_OUTPUT_TOKENS = 131072
+export const MAX_MAX_OUTPUT_TOKENS = 262144
 
 /** Out-of-range or non-finite input falls back to a bound / the default (a mistyped settings field must not kill AI features) */
 export function clampMaxOutputTokens(value: unknown): number {
